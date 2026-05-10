@@ -1,0 +1,43 @@
+# Node modules
+node_modules/
+package-lock.json
+yarn.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.code-workspace
+
+# OS
+Thumbs.db
+.DS_Store
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# Logs
+*.log
+npm-debug.log*
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing
+coverage/
+.nyc_output/
+
+# PDFs generados
+repaso_preguntas.pdf

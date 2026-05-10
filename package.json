@@ -1,0 +1,33 @@
+{
+  "name": "repaso-ingles-web",
+  "version": "1.0.0",
+  "description": "Aplicación web interactiva para repasar preguntas de examen en inglés con navegador de preguntas, PDF export y historial de intentos",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "build": "echo 'This is a static site - no build needed'",
+    "test": "echo 'No tests configured yet'"
+  },
+  "keywords": [
+    "quiz",
+    "test",
+    "english",
+    "practice",
+    "educational",
+    "web-app"
+  ],
+  "author": "David",
+  "license": "MIT",
+  "dependencies": {
+    "jspdf": "^2.5.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SFDCdavidesi/repasoIngles.git"
+  }
+}
