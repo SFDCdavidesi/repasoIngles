@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repaso Examen Inglés</title>
+  <style>
+    :root {
+      --bg-color: #f4f7f6;
+      --card-bg: #ffffff;
+      --primary: #0056b3;
+      --text-main: #333;
+      --text-muted: #666;
+      --border: #e0e0e0;
+      --selected-bg: #e6f2ff;
+      --selected-border: #0056b3;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .quiz-container {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 600px;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+    }
+    .question {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .option {
+      background: #fdfdfd;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      padding: 15px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 1rem;
+    }
+    .option:hover {
+      border-color: #b3d4ff;
+      background: #f8fbff;
+    }
+    .option.marked {
+      border-color: var(--selected-border);
+      background: var(--selected-bg);
+      font-weight: 500;
+    }
+    .marked-badge {
+      font-size: 0.75rem;
+      background: var(--primary);
+      color: white;
+      padding: 3px 8px;
+      border-radius: 12px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+    button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #004494;
+    }
+    button:disabled {
+      background: #cccccc;
+      cursor: not-allowed;
+    }
+    .note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quiz-container">
+    <div class="header">
+      <span id="question-counter">Cargando...</span>
+      <span id="page-info"></span>
+    </div>
+    
+    <div id="question-text" class="question">Preparando tu examen...</div>
+    
+    <div id="options-container" class="options">
+      </div>
+    
+    <div class="controls">
+      <button id="btn-prev" disabled>Anterior</button>
+      <button id="btn-next" disabled>Siguiente</button>
+    </div>
+
+    <div class="note">
+      * La opción resaltada es la que marcaste durante el examen. ¡Investiga si es la correcta!
+    </div>
+  </div>
+
+  <script>
+    let questions = [];
+    let currentIndex = 0;
+
+    // Elementos del DOM
+    const questionText = document.getElementById('question-text');
+    const optionsContainer = document.getElementById('options-container');
+    const questionCounter = document.getElementById('question-counter');
+    const pageInfo = document.getElementById('page-info');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+
+    // Cargar los datos del JSON
+    async function init() {
+      try {
+        const response = await fetch('data.json');
+        if (!response.ok) throw new Error("No se pudo cargar el archivo data.json");
+        const data = await response.json();
+        
+        questions = data.items;
+        if (questions.length > 0) {
+          renderQuestion(currentIndex);
+        } else {
+          questionText.textContent = "No se encontraron preguntas en el archivo.";
+        }
+      } catch (error) {
+        questionText.textContent = "Error al cargar los datos. Asegúrate de que data.json está en la misma carpeta.";
+        console.error(error);
+      }
+    }
+
+    // Dibujar la pregunta en pantalla
+    function renderQuestion(index) {
+      const q = questions[index];
+      
+      questionCounter.textContent = `Pregunta ${index + 1} de ${questions.length}`;
+      pageInfo.textContent = `Página original: ${q.page}`;
+      questionText.textContent = q.question;
+      
+      optionsContainer.innerHTML = ''; // Limpiar opciones anteriores
+
+      q.answers.forEach(ans => {
+        const div = document.createElement('div');
+        div.className = `option ${ans.selected ? 'marked' : ''}`;
+        
+        let htmlContent = `<span>${ans.text}</span>`;
+        if (ans.selected) {
+          htmlContent += `<span class="marked-badge">Tu respuesta</span>`;
+        }
+        
+        div.innerHTML = htmlContent;
+        optionsContainer.appendChild(div);
+      });
+
+      // Actualizar estado de los botones
+      btnPrev.disabled = index === 0;
+      btnNext.disabled = index === questions.length - 1;
+    }
+
+    // Eventos de los botones
+    btnPrev.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        renderQuestion(currentIndex);
+      }
+    });
+
+    btnNext.addEventListener('click', () => {
+      if (currentIndex < questions.length - 1) {
+        currentIndex++;
+        renderQuestion(currentIndex);
+      }
+    });
+
+    // Arrancar la app
+    init();
+  </script>
+</body>
+</html>
