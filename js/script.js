@@ -38,7 +38,9 @@ const el = {
   nextBtn: document.getElementById("nextBtn"),
   historyContainer: document.getElementById("historyContainer"),
   historySummary: document.getElementById("historySummary"),
-  clearHistoryBtn: document.getElementById("clearHistoryBtn")
+  clearHistoryBtn: document.getElementById("clearHistoryBtn"),
+  headerPanel: document.getElementById("headerPanel"),
+  toggleHeaderBtn: document.getElementById("toggleHeaderBtn")
 };
 
 function getCorrectIndex(question) {
@@ -536,11 +538,12 @@ function wireEvents() {
       navigatorPanel.classList.remove("open");
     }
   });
-}
 
-function renderNavigator() {
-  const grid = document.getElementById("navigatorGrid");
-  grid.innerHTML = "";
+      el.toggleHeaderBtn.addEventListener("click", () => {
+        el.headerPanel.classList.toggle("expanded");
+        const isExpanded = el.headerPanel.classList.contains("expanded");
+        el.toggleHeaderBtn.textContent = isExpanded ? "📊 Ocultar resumen" : "📊 Ver resumen";
+      });
 
   for (let i = 0; i < state.questions.length; i++) {
     const btn = document.createElement("button");

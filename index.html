@@ -10,7 +10,7 @@
 </head>
 <body>
   <main class="app">
-    <section class="panel header">
+    <section class="panel header" id="headerPanel">
       <div class="title-row">
         <h1>Repaso Universal de Test (data.json)</h1>
         <span id="datasetName" class="muted">Fuente: data.json</span>
@@ -41,6 +41,11 @@
         <button id="resetBtn" class="btn-secondary" type="button">Reiniciar test</button>
         <button id="downloadPdfBtn" class="btn-primary" type="button">Descargar preguntas en PDF</button>
       </div>
+      
+      <button id="toggleHeaderBtn" class="toggle-header" type="button" aria-label="Expandir/Contraer resumen">
+        📊 Ver resumen
+      </button>
+      
       <p id="statusLine" class="muted" role="status" aria-live="polite">Cargando preguntas...</p>
     </section>
 

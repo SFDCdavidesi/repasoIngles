@@ -467,4 +467,153 @@ input[type="file"] {
   .option {
     padding: 10px;
   }
-}
+
+    /* Mobile optimizations */
+    .header {
+      padding: 12px;
+      max-height: 80px;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      position: relative;
+    }
+
+    .header.expanded {
+      max-height: 500px;
+    }
+
+    .title-row {
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    .muted {
+      font-size: 0.85rem;
+    }
+
+    .score-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin: 8px 0;
+    }
+
+    .score-box {
+      padding: 8px;
+      border-radius: 8px;
+    }
+
+    .score-label {
+      font-size: 0.7rem;
+      margin-bottom: 2px;
+    }
+
+    .score-value {
+      font-size: 0.9rem;
+    }
+
+    .actions {
+      display: none;
+    }
+
+    .toggle-header {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #e8eef6;
+      border: 1px solid #d2deea;
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      white-space: nowrap;
+      margin-top: 8px;
+    }
+
+    .toggle-header:active {
+      transform: scale(0.95);
+    }
+
+    .quiz {
+      padding: 12px;
+      gap: 10px;
+    }
+
+    .question-head {
+      gap: 8px;
+    }
+
+    .chips {
+      gap: 4px;
+    }
+
+    .chip {
+      padding: 3px 6px;
+      font-size: 0.75rem;
+    }
+
+    #chipCounter {
+      background: var(--primary);
+      color: white;
+      padding: 4px 8px !important;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .question-text {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .option {
+      padding: 10px;
+      font-size: 0.9rem;
+      border: 1.5px solid var(--line);
+    }
+
+    .feedback {
+      padding: 8px;
+      font-size: 0.85rem;
+    }
+
+    .summary-box {
+      padding: 8px;
+      font-size: 0.85rem;
+    }
+
+    .nav {
+      gap: 8px;
+    }
+
+    .nav button {
+      flex: 1;
+      padding: 8px;
+      font-size: 0.85rem;
+    }
+
+    .history {
+      padding: 12px;
+    }
+
+    .history-item {
+      padding: 8px;
+      gap: 6px;
+    }
+
+    .small {
+      font-size: 0.8rem;
+    }
+
+    /* Hide score grid in collapsed mobile view */
+    .header .score-grid {
+      display: none !important;
+    }
+
+    .header.expanded .score-grid {
+      display: grid !important;
+    }
+  }
