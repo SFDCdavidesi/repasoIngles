@@ -1,7 +1,99 @@
 {
-  "exportedAt": "2026-05-10T08:41:38.368Z",
-  "totalQuestions": 72,
+  "exportedAt": "2026-05-10T09:03:47.717Z",
+  "totalQuestions": 135,
   "items": [
+    {
+      "answers": [
+        {
+          "selected": true,
+          "text": "were baked"
+        },
+        {
+          "selected": false,
+          "text": "bake"
+        },
+        {
+          "selected": false,
+          "text": "are baked"
+        },
+        {
+          "selected": false,
+          "text": "baked"
+        }
+      ],
+      "page": 0,
+      "question": "The cookies _____ by the children yesterday.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "Next year, we will have finished college."
+        },
+        {
+          "selected": true,
+          "text": "Next year, we will be finishing college."
+        },
+        {
+          "selected": false,
+          "text": "Next year, we will finishing college."
+        },
+        {
+          "selected": false,
+          "text": "Next year, we will finish college."
+        }
+      ],
+      "page": 1,
+      "question": "Which sentence is in the future continuous?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "the higher"
+        },
+        {
+          "selected": false,
+          "text": "higher"
+        },
+        {
+          "selected": true,
+          "text": "the highest"
+        },
+        {
+          "selected": false,
+          "text": "the high"
+        }
+      ],
+      "page": 2,
+      "question": "Mount Everest is ________ (high) mountain in the world.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "might"
+        },
+        {
+          "selected": false,
+          "text": "must"
+        },
+        {
+          "selected": false,
+          "text": "could"
+        },
+        {
+          "selected": true,
+          "text": "can"
+        }
+      ],
+      "page": 3,
+      "question": "She _____ play the piano very well, she has been offered a job before graduating.",
+      "questionIndexOnPage": 0
+    },
     {
       "answers": [
         {
@@ -23,6 +115,79 @@
       ],
       "page": 4,
       "question": "The cookies ______ (bake) by my grandmother every Christmas.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "was breaking"
+        },
+        {
+          "selected": false,
+          "text": "has broken"
+        },
+        {
+          "selected": false,
+          "text": "breaks"
+        },
+        {
+          "selected": true,
+          "text": "was broken"
+        }
+      ],
+      "page": 5,
+      "question": "The window ___ last night during the storm.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "were loosen"
+        },
+        {
+          "selected": false,
+          "text": "were lost"
+        },
+        {
+          "selected": false,
+          "text": "were losted"
+        },
+        {
+          "selected": false,
+          "text": "was lost"
+        },
+        {
+          "selected": false,
+          "text": "could have lost"
+        }
+      ],
+      "page": 6,
+      "question": "Her keys ________________this morning when leaving the house.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "turn into"
+        },
+        {
+          "selected": false,
+          "text": "turn off"
+        },
+        {
+          "selected": false,
+          "text": "turn up"
+        },
+        {
+          "selected": false,
+          "text": "turn down"
+        }
+      ],
+      "page": 7,
+      "question": "I need to ______ the lights before we leave the house.",
       "questionIndexOnPage": 0
     },
     {
@@ -52,6 +217,98 @@
       "answers": [
         {
           "selected": false,
+          "text": "can"
+        },
+        {
+          "selected": false,
+          "text": "better"
+        },
+        {
+          "selected": false,
+          "text": "could"
+        },
+        {
+          "selected": false,
+          "text": "should"
+        }
+      ],
+      "page": 9,
+      "question": "You ______ study English every day (advice)",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "To land"
+        },
+        {
+          "selected": false,
+          "text": "To put on"
+        },
+        {
+          "selected": false,
+          "text": "To remove"
+        },
+        {
+          "selected": false,
+          "text": "To delay"
+        }
+      ],
+      "page": 10,
+      "question": "What does \"take off\" mean?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "I need many information."
+        },
+        {
+          "selected": false,
+          "text": "I need some information."
+        },
+        {
+          "selected": false,
+          "text": "I need a information."
+        },
+        {
+          "selected": false,
+          "text": "I need an information."
+        }
+      ],
+      "page": 11,
+      "question": "Which sentence is correct?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "His work is harder than his colleague´'s."
+        },
+        {
+          "selected": false,
+          "text": "He sings louder than her."
+        },
+        {
+          "selected": false,
+          "text": "She writes more neat than anyone else."
+        },
+        {
+          "selected": false,
+          "text": "She drives more carefully than him."
+        }
+      ],
+      "page": 12,
+      "question": "What is the correct comparative adverb?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
           "text": "was built"
         },
         {
@@ -69,6 +326,121 @@
       ],
       "page": 13,
       "question": "The new stadium ______ (build) to host the Olympics last March.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "more expensive"
+        },
+        {
+          "selected": false,
+          "text": "the most expensive"
+        },
+        {
+          "selected": false,
+          "text": "most expensive"
+        },
+        {
+          "selected": false,
+          "text": "the more expensive"
+        }
+      ],
+      "page": 14,
+      "question": "This hotel is ________ (expensive) in the city.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "They said they would go to the park."
+        },
+        {
+          "selected": false,
+          "text": "They said we will go to the park."
+        },
+        {
+          "selected": false,
+          "text": "They said they are going to the park."
+        },
+        {
+          "selected": false,
+          "text": "They said they will go to the park."
+        }
+      ],
+      "page": 15,
+      "question": "They said, 'We will go to the park.'",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "READ"
+        },
+        {
+          "selected": false,
+          "text": "TAKE"
+        },
+        {
+          "selected": false,
+          "text": "HURT"
+        },
+        {
+          "selected": false,
+          "text": "SHUT"
+        }
+      ],
+      "page": 16,
+      "question": "Which verb doesn't change in its past tense and past participle forms?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "To get on well"
+        },
+        {
+          "selected": false,
+          "text": "To argue"
+        },
+        {
+          "selected": false,
+          "text": "To fight"
+        },
+        {
+          "selected": false,
+          "text": "To depart"
+        }
+      ],
+      "page": 17,
+      "question": "What does \"get along\" mean?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "speaks"
+        },
+        {
+          "selected": false,
+          "text": "speak"
+        },
+        {
+          "selected": false,
+          "text": "can"
+        },
+        {
+          "selected": false,
+          "text": "could"
+        }
+      ],
+      "page": 18,
+      "question": "‘I can speak Spanish,’ she said. She said she ____________________ speak Spanish.",
       "questionIndexOnPage": 0
     },
     {
@@ -98,6 +470,52 @@
       "answers": [
         {
           "selected": false,
+          "text": "had written"
+        },
+        {
+          "selected": false,
+          "text": "wrote"
+        },
+        {
+          "selected": false,
+          "text": "was written"
+        },
+        {
+          "selected": false,
+          "text": "is written"
+        }
+      ],
+      "page": 20,
+      "question": "The book _____ by the author last year.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "any"
+        },
+        {
+          "selected": false,
+          "text": "much"
+        },
+        {
+          "selected": false,
+          "text": "some"
+        },
+        {
+          "selected": false,
+          "text": "many"
+        }
+      ],
+      "page": 21,
+      "question": "Choose the correct option to complete the sentence: \"How _______ milk is in the fridge?\"",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
           "text": "filmed"
         },
         {
@@ -121,6 +539,52 @@
       "answers": [
         {
           "selected": false,
+          "text": "come"
+        },
+        {
+          "selected": false,
+          "text": "will come"
+        },
+        {
+          "selected": false,
+          "text": "would come"
+        },
+        {
+          "selected": false,
+          "text": "is coming"
+        }
+      ],
+      "page": 23,
+      "question": "Julio _______________  to Spain in the future",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "bakes"
+        },
+        {
+          "selected": false,
+          "text": "was baked"
+        },
+        {
+          "selected": false,
+          "text": "is baking"
+        },
+        {
+          "selected": false,
+          "text": "was baking"
+        }
+      ],
+      "page": 24,
+      "question": "The cake ___ by Tom for his sister's birthday party last weekend.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
           "text": "-able"
         },
         {
@@ -138,6 +602,52 @@
       ],
       "page": 25,
       "question": "What is the free morpheme in the word \"unbelievable\"?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "To follow"
+        },
+        {
+          "selected": false,
+          "text": "To resemble"
+        },
+        {
+          "selected": false,
+          "text": "To chase"
+        },
+        {
+          "selected": false,
+          "text": "To lead"
+        }
+      ],
+      "page": 26,
+      "question": "What does \"take after\" mean?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "house"
+        },
+        {
+          "selected": false,
+          "text": "cat"
+        },
+        {
+          "selected": false,
+          "text": "run"
+        },
+        {
+          "selected": false,
+          "text": "-ness"
+        }
+      ],
+      "page": 27,
+      "question": "Which of the following is a bound morpheme?",
       "questionIndexOnPage": 0
     },
     {
@@ -190,6 +700,75 @@
       "answers": [
         {
           "selected": false,
+          "text": "Ebook reader"
+        },
+        {
+          "selected": false,
+          "text": "Car"
+        },
+        {
+          "selected": false,
+          "text": "Laptop"
+        },
+        {
+          "selected": false,
+          "text": "Mobile phone"
+        }
+      ],
+      "page": 30,
+      "question": "It's the top gadget for reading.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "many"
+        },
+        {
+          "selected": false,
+          "text": "any"
+        },
+        {
+          "selected": false,
+          "text": "some"
+        },
+        {
+          "selected": false,
+          "text": "a"
+        }
+      ],
+      "page": 31,
+      "question": "Choose the correct option to complete the sentence: \"He doesn't have _______ money.\"",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "HIT"
+        },
+        {
+          "selected": false,
+          "text": "PUT"
+        },
+        {
+          "selected": false,
+          "text": "LET"
+        },
+        {
+          "selected": false,
+          "text": "COME"
+        }
+      ],
+      "page": 32,
+      "question": "Which verb changes in its past tense and past participle forms?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
           "text": "Must"
         },
         {
@@ -207,6 +786,75 @@
       ],
       "page": 33,
       "question": "Fill in the blank: __________ you open the window? It is quite hot in here. (this is a request)",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "A file from the internet"
+        },
+        {
+          "selected": false,
+          "text": "For a topic on a search engine"
+        },
+        {
+          "selected": false,
+          "text": "For a new service"
+        },
+        {
+          "selected": false,
+          "text": "The web for information"
+        }
+      ],
+      "page": 34,
+      "question": "Match each internet verb with its correct collocation. BROWSE",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "didn’t"
+        },
+        {
+          "selected": false,
+          "text": "isn’t"
+        },
+        {
+          "selected": false,
+          "text": "don’t"
+        },
+        {
+          "selected": false,
+          "text": "was"
+        }
+      ],
+      "page": 35,
+      "question": "The awarded credit ______ let the company go into bankruptcy.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "studying"
+        },
+        {
+          "selected": false,
+          "text": "were studying"
+        },
+        {
+          "selected": false,
+          "text": "are studying"
+        },
+        {
+          "selected": false,
+          "text": "studied"
+        }
+      ],
+      "page": 36,
+      "question": "We ____________ (study) for a Maths test at the moment.",
       "questionIndexOnPage": 0
     },
     {
@@ -236,6 +884,75 @@
       "answers": [
         {
           "selected": false,
+          "text": "There is many apples in the basket."
+        },
+        {
+          "selected": false,
+          "text": "There are much apples in the basket."
+        },
+        {
+          "selected": false,
+          "text": "There is a lot of apples in the basket."
+        },
+        {
+          "selected": false,
+          "text": "There are many apples in the basket."
+        }
+      ],
+      "page": 38,
+      "question": "Which sentence is correct?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "To start a hobby"
+        },
+        {
+          "selected": false,
+          "text": "To decline"
+        },
+        {
+          "selected": false,
+          "text": "To accept"
+        },
+        {
+          "selected": false,
+          "text": "To stop"
+        }
+      ],
+      "page": 39,
+      "question": "What does \"take up\" mean?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "Hyper Transfer Text Protocol"
+        },
+        {
+          "selected": false,
+          "text": "HyperText Transmission Protocol"
+        },
+        {
+          "selected": false,
+          "text": "HyperText Transfer Process"
+        },
+        {
+          "selected": false,
+          "text": "HyperText Transfer Protocol"
+        }
+      ],
+      "page": 40,
+      "question": "What does \"HTTP\" stand for?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
           "text": "Stream"
         },
         {
@@ -259,6 +976,420 @@
       "answers": [
         {
           "selected": false,
+          "text": "will release"
+        },
+        {
+          "selected": false,
+          "text": "will be released"
+        },
+        {
+          "selected": false,
+          "text": "released"
+        },
+        {
+          "selected": false,
+          "text": "is released"
+        }
+      ],
+      "page": 42,
+      "question": "The new smartphone model ______ (release) next month.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "hot"
+        },
+        {
+          "selected": false,
+          "text": "more hot"
+        },
+        {
+          "selected": false,
+          "text": "hottest"
+        },
+        {
+          "selected": false,
+          "text": "hotter"
+        }
+      ],
+      "page": 43,
+      "question": "Today is ________ (hot) than yesterday.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "Zero conditional"
+        },
+        {
+          "selected": false,
+          "text": "Second conditional"
+        },
+        {
+          "selected": false,
+          "text": "Third conditional"
+        },
+        {
+          "selected": false,
+          "text": "First conditional"
+        }
+      ],
+      "page": 44,
+      "question": "If I studied harder, I would get better grades. What type of conditional sentence is this?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "is holded"
+        },
+        {
+          "selected": false,
+          "text": "held"
+        },
+        {
+          "selected": false,
+          "text": "is being held"
+        },
+        {
+          "selected": false,
+          "text": "will be held"
+        }
+      ],
+      "page": 45,
+      "question": "The art exhibition ______ (hold) in the downtown gallery at the moment.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "took"
+        },
+        {
+          "selected": false,
+          "text": "are taking"
+        },
+        {
+          "selected": false,
+          "text": "taking"
+        },
+        {
+          "selected": false,
+          "text": "takes"
+        }
+      ],
+      "page": 46,
+      "question": "We ___________ (take) an exam at the moment.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "teach"
+        },
+        {
+          "selected": false,
+          "text": "tea"
+        },
+        {
+          "selected": false,
+          "text": "each"
+        },
+        {
+          "selected": false,
+          "text": "-er"
+        }
+      ],
+      "page": 47,
+      "question": "What is the bound morpheme in the word \"teacher\"?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "BROKED"
+        },
+        {
+          "selected": false,
+          "text": "BROKEN"
+        },
+        {
+          "selected": false,
+          "text": "BREAKED"
+        },
+        {
+          "selected": false,
+          "text": "BREAKEN"
+        }
+      ],
+      "page": 48,
+      "question": "What is the past participle of \"BREAK\"?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "He asked if I like pizza."
+        },
+        {
+          "selected": false,
+          "text": "He asked if you like pizza."
+        },
+        {
+          "selected": false,
+          "text": "He asked do you like pizza."
+        },
+        {
+          "selected": false,
+          "text": "He asked if I liked pizza."
+        }
+      ],
+      "page": 49,
+      "question": "He asked, 'Do you like pizza?'",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "Free"
+        },
+        {
+          "selected": false,
+          "text": "Inflectional"
+        },
+        {
+          "selected": false,
+          "text": "Bound"
+        },
+        {
+          "selected": false,
+          "text": "Root"
+        }
+      ],
+      "page": 50,
+      "question": "What type of morpheme is \"dis-\" in \"disagree\"?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "wearing"
+        },
+        {
+          "selected": false,
+          "text": "of wearing"
+        },
+        {
+          "selected": true,
+          "text": "to wear"
+        },
+        {
+          "selected": false,
+          "text": "wear"
+        }
+      ],
+      "page": 51,
+      "question": "It is not necessary ________ a bow tie in the interview.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "the most interesting"
+        },
+        {
+          "selected": false,
+          "text": "most interesting"
+        },
+        {
+          "selected": false,
+          "text": "interestingest"
+        },
+        {
+          "selected": false,
+          "text": "more interesting"
+        }
+      ],
+      "page": 52,
+      "question": "This is ________ (interesting) book I've ever read.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "will complete"
+        },
+        {
+          "selected": false,
+          "text": "will be completed"
+        },
+        {
+          "selected": false,
+          "text": "is completed"
+        },
+        {
+          "selected": false,
+          "text": "completed"
+        }
+      ],
+      "page": 53,
+      "question": "The project _____ next month.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "was living"
+        },
+        {
+          "selected": false,
+          "text": "living"
+        },
+        {
+          "selected": false,
+          "text": "live"
+        },
+        {
+          "selected": false,
+          "text": "is living"
+        }
+      ],
+      "page": 54,
+      "question": "‘I’m living in Madrid,’ he said. He said he ____________________ in Madrid.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "She will complete the project by Monday."
+        },
+        {
+          "selected": false,
+          "text": "She has completed the project by Monday."
+        },
+        {
+          "selected": false,
+          "text": "She will have completed the project by Monday."
+        },
+        {
+          "selected": false,
+          "text": "She completes the project by Monday."
+        }
+      ],
+      "page": 55,
+      "question": "Which sentence is in the future perfect?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "would graduate"
+        },
+        {
+          "selected": false,
+          "text": "graduating"
+        },
+        {
+          "selected": false,
+          "text": "graduate"
+        },
+        {
+          "selected": false,
+          "text": "will graduate"
+        }
+      ],
+      "page": 56,
+      "question": "‘We will graduate from University next May‘ they said. They said they ____________ (graduate) from university next May.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "turn down"
+        },
+        {
+          "selected": false,
+          "text": "turn up"
+        },
+        {
+          "selected": false,
+          "text": "turn off"
+        },
+        {
+          "selected": false,
+          "text": "turn out"
+        }
+      ],
+      "page": 57,
+      "question": "She decided to ______ the job offer because it didn't meet her expectations.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "will sell"
+        },
+        {
+          "selected": false,
+          "text": "will be sold"
+        },
+        {
+          "selected": false,
+          "text": "is sold"
+        },
+        {
+          "selected": false,
+          "text": "sells"
+        }
+      ],
+      "page": 58,
+      "question": "The house _____ by the new owners soon.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "will be finished"
+        },
+        {
+          "selected": false,
+          "text": "will finished"
+        },
+        {
+          "selected": false,
+          "text": "is finished"
+        },
+        {
+          "selected": false,
+          "text": "finishes"
+        }
+      ],
+      "page": 59,
+      "question": "The report ___ by the end of the week.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
           "text": "turn off"
         },
         {
@@ -276,6 +1407,75 @@
       ],
       "page": 60,
       "question": "Please ______ the radio; I can't concentrate with that noise.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "can he?"
+        },
+        {
+          "selected": false,
+          "text": "can’t he?"
+        },
+        {
+          "selected": false,
+          "text": "is he?"
+        },
+        {
+          "selected": false,
+          "text": "does he?"
+        }
+      ],
+      "page": 61,
+      "question": "Choose the correct tag question for: 'He can drive a car, ___?'.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "might"
+        },
+        {
+          "selected": false,
+          "text": "would"
+        },
+        {
+          "selected": false,
+          "text": "must"
+        },
+        {
+          "selected": false,
+          "text": "should"
+        }
+      ],
+      "page": 62,
+      "question": "You _____ speak to your teacher if you have any questions. (advise)",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "most intelligent"
+        },
+        {
+          "selected": false,
+          "text": "intelligentest"
+        },
+        {
+          "selected": false,
+          "text": "more intelligent"
+        },
+        {
+          "selected": false,
+          "text": "the most intelligent"
+        }
+      ],
+      "page": 63,
+      "question": "She is ________ (intelligent) student in the class.",
       "questionIndexOnPage": 0
     },
     {
@@ -742,6 +1942,29 @@
       "answers": [
         {
           "selected": false,
+          "text": "many"
+        },
+        {
+          "selected": false,
+          "text": "a lot"
+        },
+        {
+          "selected": false,
+          "text": "some"
+        },
+        {
+          "selected": false,
+          "text": "any"
+        }
+      ],
+      "page": 84,
+      "question": "Choose the correct option to complete the sentence: \"I don't have _______ time to finish this.\"",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
           "text": "Root"
         },
         {
@@ -857,6 +2080,29 @@
       "answers": [
         {
           "selected": false,
+          "text": "He said he had finished his homework."
+        },
+        {
+          "selected": false,
+          "text": "He said he has finished his homework."
+        },
+        {
+          "selected": false,
+          "text": "He said he finished his homework."
+        },
+        {
+          "selected": false,
+          "text": "He said he finishes his homework."
+        }
+      ],
+      "page": 90,
+      "question": "He said, 'I have finished my homework.'",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
           "text": "She said I am reading a book."
         },
         {
@@ -874,6 +2120,29 @@
       ],
       "page": 91,
       "question": "She said, 'I am reading a book.'",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "is being delivered"
+        },
+        {
+          "selected": false,
+          "text": "will be delivered"
+        },
+        {
+          "selected": false,
+          "text": "has been delivered"
+        },
+        {
+          "selected": false,
+          "text": "was delivered"
+        }
+      ],
+      "page": 92,
+      "question": "The package _____________ next Monday.",
       "questionIndexOnPage": 0
     },
     {
@@ -949,6 +2218,29 @@
       "answers": [
         {
           "selected": false,
+          "text": "turn on"
+        },
+        {
+          "selected": false,
+          "text": "turn up"
+        },
+        {
+          "selected": false,
+          "text": "turn off"
+        },
+        {
+          "selected": false,
+          "text": "turn around"
+        }
+      ],
+      "page": 96,
+      "question": "When you ______ the corner, you'll see the building on your right.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
           "text": "I have a apples."
         },
         {
@@ -1012,6 +2304,29 @@
       ],
       "page": 99,
       "question": "Which sentence is correct?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "SEEN"
+        },
+        {
+          "selected": false,
+          "text": "SAW"
+        },
+        {
+          "selected": false,
+          "text": "SEEING"
+        },
+        {
+          "selected": false,
+          "text": "SIGHT"
+        }
+      ],
+      "page": 100,
+      "question": "What is the past tense of \"SEE\"?",
       "questionIndexOnPage": 0
     },
     {
@@ -1225,6 +2540,29 @@
       "answers": [
         {
           "selected": false,
+          "text": "GET"
+        },
+        {
+          "selected": false,
+          "text": "SAY"
+        },
+        {
+          "selected": false,
+          "text": "COME"
+        },
+        {
+          "selected": false,
+          "text": "MAKE"
+        }
+      ],
+      "page": 110,
+      "question": "Which verb means \"conseguir\" in Spanish?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
           "text": "is coming"
         },
         {
@@ -1265,6 +2603,29 @@
       ],
       "page": 112,
       "question": "‘I will visit Madrid before moving to Barcelona,’ she said. She said she ___________________ Madrid before moving to Barcelona.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "taller"
+        },
+        {
+          "selected": false,
+          "text": "tallest"
+        },
+        {
+          "selected": false,
+          "text": "tall"
+        },
+        {
+          "selected": false,
+          "text": "more tall"
+        }
+      ],
+      "page": 113,
+      "question": "She is ________ (tall) than her brother.",
       "questionIndexOnPage": 0
     },
     {
@@ -1409,6 +2770,29 @@
       "answers": [
         {
           "selected": false,
+          "text": "Will he arrive at 5 PM?"
+        },
+        {
+          "selected": false,
+          "text": "He will arrive at 5 PM?"
+        },
+        {
+          "selected": false,
+          "text": "Does he will arrive at 5 PM?"
+        },
+        {
+          "selected": false,
+          "text": "Arrives he at 5 PM?"
+        }
+      ],
+      "page": 120,
+      "question": "What is the correct question form for: 'He will arrive at 5 PM'?",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
           "text": "might"
         },
         {
@@ -1495,6 +2879,75 @@
       ],
       "page": 124,
       "question": "Choose the correct option to complete the sentence: \"There aren't _______ cookies left.\"",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "will be provide"
+        },
+        {
+          "selected": false,
+          "text": "is provided"
+        },
+        {
+          "selected": false,
+          "text": "will be provided"
+        },
+        {
+          "selected": false,
+          "text": "provided"
+        }
+      ],
+      "page": 125,
+      "question": "The answers to the quiz ______ (provide) at the end of each session on Mondays.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "more interesting"
+        },
+        {
+          "selected": false,
+          "text": "most interesting"
+        },
+        {
+          "selected": false,
+          "text": "interestinger"
+        },
+        {
+          "selected": false,
+          "text": "interestingest"
+        }
+      ],
+      "page": 126,
+      "question": "This book is ________ (interesting) than the movie.",
+      "questionIndexOnPage": 0
+    },
+    {
+      "answers": [
+        {
+          "selected": false,
+          "text": "She asked where am I going."
+        },
+        {
+          "selected": false,
+          "text": "She asked where I was going."
+        },
+        {
+          "selected": false,
+          "text": "She asked where you are going."
+        },
+        {
+          "selected": false,
+          "text": "She asked where are you going."
+        }
+      ],
+      "page": 127,
+      "question": "She asked, 'Where are you going?'",
       "questionIndexOnPage": 0
     },
     {
