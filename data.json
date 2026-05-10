@@ -147,7 +147,7 @@
           "text": "were loosen"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "were lost"
         },
         {
@@ -174,7 +174,7 @@
           "text": "turn into"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "turn off"
         },
         {
@@ -193,7 +193,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "were sent"
         },
         {
@@ -228,7 +228,7 @@
           "text": "could"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "should"
         }
       ],
@@ -247,7 +247,7 @@
           "text": "To put on"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "To remove"
         },
         {
@@ -266,7 +266,7 @@
           "text": "I need many information."
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "I need some information."
         },
         {
@@ -297,7 +297,7 @@
           "text": "She writes more neat than anyone else."
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "She drives more carefully than him."
         }
       ],
@@ -308,7 +308,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "was built"
         },
         {
@@ -335,7 +335,7 @@
           "text": "more expensive"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "the most expensive"
         },
         {
@@ -354,7 +354,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "They said they would go to the park."
         },
         {
@@ -385,7 +385,7 @@
           "text": "TAKE"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "HURT"
         },
         {
@@ -400,7 +400,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "To get on well"
         },
         {
@@ -435,7 +435,7 @@
           "text": "can"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "could"
         }
       ],
@@ -454,11 +454,11 @@
           "text": "is coming"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "would come"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "would come"
         }
       ],
@@ -477,7 +477,7 @@
           "text": "wrote"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "was written"
         },
         {
@@ -496,7 +496,7 @@
           "text": "any"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "much"
         },
         {
@@ -523,7 +523,7 @@
           "text": "will be filmed"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "was filmed"
         },
         {
@@ -542,7 +542,7 @@
           "text": "come"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "will come"
         },
         {
@@ -565,7 +565,7 @@
           "text": "bakes"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "was baked"
         },
         {
@@ -596,7 +596,7 @@
           "text": "un-"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "believe"
         }
       ],
@@ -611,7 +611,7 @@
           "text": "To follow"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "To resemble"
         },
         {
@@ -642,7 +642,7 @@
           "text": "run"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "-ness"
         }
       ],
@@ -661,7 +661,7 @@
           "text": "To ignore"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "To improve, exert effort"
         },
         {
@@ -684,7 +684,7 @@
           "text": "I seen such a beautiful sunset. Have you?"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "You're coming to the party, aren't you?"
         },
         {
@@ -699,7 +699,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "Ebook reader"
         },
         {
@@ -726,7 +726,7 @@
           "text": "many"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "any"
         },
         {
@@ -757,7 +757,7 @@
           "text": "LET"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "COME"
         }
       ],
@@ -780,7 +780,7 @@
           "text": "Do"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "Could"
         }
       ],
@@ -803,7 +803,7 @@
           "text": "For a new service"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "The web for information"
         }
       ],
@@ -845,7 +845,7 @@
           "text": "were studying"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "are studying"
         },
         {
@@ -872,7 +872,7 @@
           "text": "chat show"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "documentary"
         }
       ],
@@ -895,7 +895,7 @@
           "text": "There is a lot of apples in the basket."
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "There are many apples in the basket."
         }
       ],
@@ -906,7 +906,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "To start a hobby"
         },
         {
@@ -941,7 +941,7 @@
           "text": "HyperText Transfer Process"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "HyperText Transfer Protocol"
         }
       ],
@@ -960,7 +960,7 @@
           "text": "Download"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "Bookmark"
         },
         {
@@ -979,7 +979,7 @@
           "text": "will release"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "will be released"
         },
         {
@@ -1010,7 +1010,7 @@
           "text": "hottest"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "hotter"
         }
       ],
@@ -1025,7 +1025,7 @@
           "text": "Zero conditional"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "Second conditional"
         },
         {
@@ -1052,7 +1052,7 @@
           "text": "held"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "is being held"
         },
         {
@@ -1071,7 +1071,7 @@
           "text": "took"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "are taking"
         },
         {
@@ -1102,7 +1102,7 @@
           "text": "each"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "-er"
         }
       ],
@@ -1117,7 +1117,7 @@
           "text": "BROKED"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "BROKEN"
         },
         {
@@ -1148,7 +1148,7 @@
           "text": "He asked do you like pizza."
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "He asked if I liked pizza."
         }
       ],
@@ -1167,7 +1167,7 @@
           "text": "Inflectional"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "Bound"
         },
         {
@@ -1205,7 +1205,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "the most interesting"
         },
         {
@@ -1232,7 +1232,7 @@
           "text": "will complete"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "will be completed"
         },
         {
@@ -1251,7 +1251,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "was living"
         },
         {
@@ -1282,7 +1282,7 @@
           "text": "She has completed the project by Monday."
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "She will have completed the project by Monday."
         },
         {
@@ -1297,7 +1297,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "would graduate"
         },
         {
@@ -1320,7 +1320,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "turn down"
         },
         {
@@ -1347,7 +1347,7 @@
           "text": "will sell"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "will be sold"
         },
         {
@@ -1366,7 +1366,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "will be finished"
         },
         {
@@ -1389,7 +1389,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "turn off"
         },
         {
@@ -1447,7 +1447,7 @@
           "text": "must"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "should"
         }
       ],
@@ -1470,7 +1470,7 @@
           "text": "more intelligent"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "the most intelligent"
         }
       ],
@@ -1493,7 +1493,7 @@
           "text": "is watching"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "was watching"
         }
       ],
@@ -1508,7 +1508,7 @@
           "text": "upload"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "sign up"
         },
         {
@@ -1535,7 +1535,7 @@
           "text": "lives"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "lived"
         },
         {
@@ -1550,7 +1550,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "To exit"
         },
         {
@@ -1585,7 +1585,7 @@
           "text": "To start"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "To recover from"
         }
       ],
@@ -1604,7 +1604,7 @@
           "text": "To relax"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "To exercise"
         },
         {
@@ -1646,7 +1646,7 @@
           "text": "visits"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "visited"
         },
         {
@@ -1673,7 +1673,7 @@
           "text": "will be prepared"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "were prepared"
         },
         {
@@ -1700,7 +1700,7 @@
           "text": "difficulter"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "more difficult"
         }
       ],
@@ -1719,7 +1719,7 @@
           "text": "Quickly"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "Playground"
         },
         {
@@ -1738,7 +1738,7 @@
           "text": "Hacking into a computer"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "Fraudulent attempts to obtain sensitive information"
         },
         {
@@ -1757,7 +1757,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "horror"
         },
         {
@@ -1792,7 +1792,7 @@
           "text": "To finish early"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "To become excited"
         }
       ],
@@ -1811,7 +1811,7 @@
           "text": "A story about horror and supernatural beings"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "A story about mystery and suspense"
         },
         {
@@ -1826,7 +1826,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "WAS/WERE"
         },
         {
@@ -1861,7 +1861,7 @@
           "text": "can"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "must"
         }
       ],
@@ -1880,7 +1880,7 @@
           "text": "Tree"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "Dogs"
         },
         {
@@ -1895,7 +1895,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "upload"
         },
         {
@@ -1918,7 +1918,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "was interviewed"
         },
         {
@@ -1953,7 +1953,7 @@
           "text": "some"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "any"
         }
       ],
@@ -1976,7 +1976,7 @@
           "text": "Free"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "Bound"
         }
       ],
@@ -2018,7 +2018,7 @@
           "text": "Inflectional"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "Bound"
         },
         {
@@ -2037,7 +2037,7 @@
           "text": "documentary"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "chat show"
         },
         {
@@ -2060,7 +2060,7 @@
           "text": "She travels next week."
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "She will be traveling next week."
         },
         {
@@ -2079,7 +2079,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "He said he had finished his homework."
         },
         {
@@ -2110,7 +2110,7 @@
           "text": "She said she read a book."
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "She said she was reading a book."
         },
         {
@@ -2129,7 +2129,7 @@
           "text": "is being delivered"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "will be delivered"
         },
         {
@@ -2152,7 +2152,7 @@
           "text": "TAKSEN"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "TOOK"
         },
         {
@@ -2179,7 +2179,7 @@
           "text": "Search"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "Connect"
         },
         {
@@ -2194,7 +2194,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "any"
         },
         {
@@ -2229,7 +2229,7 @@
           "text": "turn off"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "turn around"
         }
       ],
@@ -2244,7 +2244,7 @@
           "text": "I have a apples."
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "I have an apple."
         },
         {
@@ -2267,7 +2267,7 @@
           "text": "She said I am reading a book."
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "She said she was reading a book."
         },
         {
@@ -2294,7 +2294,7 @@
           "text": "I bought a breads."
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "I bought some bread."
         },
         {
@@ -2313,7 +2313,7 @@
           "text": "SEEN"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "SAW"
         },
         {
@@ -2340,7 +2340,7 @@
           "text": "HEARED"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "HEARD"
         },
         {
@@ -2363,7 +2363,7 @@
           "text": "to write"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "writing"
         },
         {
@@ -2390,7 +2390,7 @@
           "text": "Inflectional"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "Free"
         }
       ],
@@ -2401,7 +2401,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "She has many friends."
         },
         {
@@ -2432,7 +2432,7 @@
           "text": "Science Fiction"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "Fantasy"
         },
         {
@@ -2451,7 +2451,7 @@
           "text": "turn up"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "turn off"
         },
         {
@@ -2474,7 +2474,7 @@
           "text": "chat show"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "quiz show"
         },
         {
@@ -2493,7 +2493,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "the hottest"
         },
         {
@@ -2524,7 +2524,7 @@
           "text": "plays"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "is playing"
         },
         {
@@ -2539,7 +2539,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "GET"
         },
         {
@@ -2562,7 +2562,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "is coming"
         },
         {
@@ -2589,7 +2589,7 @@
           "text": "visit"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "would visit"
         },
         {
@@ -2608,7 +2608,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "taller"
         },
         {
@@ -2631,7 +2631,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "goes"
         },
         {
@@ -2685,7 +2685,7 @@
           "text": "goes"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "was going"
         },
         {
@@ -2704,7 +2704,7 @@
           "text": "re-"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "play"
         },
         {
@@ -2723,7 +2723,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "If I were rich, I would travel the world."
         },
         {
@@ -2754,7 +2754,7 @@
           "text": "was being repair"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "was being repaired"
         },
         {
@@ -2769,7 +2769,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "Will he arrive at 5 PM?"
         },
         {
@@ -2796,7 +2796,7 @@
           "text": "might"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "must"
         },
         {
@@ -2823,7 +2823,7 @@
           "text": "Coffee or tea, do you like?"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "Do you prefer coffee or tea?"
         },
         {
@@ -2850,7 +2850,7 @@
           "text": "VER"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "Oler"
         }
       ],
@@ -2869,7 +2869,7 @@
           "text": "much"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "any"
         },
         {
@@ -2892,7 +2892,7 @@
           "text": "is provided"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "will be provided"
         },
         {
@@ -2907,7 +2907,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "more interesting"
         },
         {
@@ -2934,7 +2934,7 @@
           "text": "She asked where am I going."
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "She asked where I was going."
         },
         {
@@ -2965,7 +2965,7 @@
           "text": "RED"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "READ"
         }
       ],
@@ -3011,7 +3011,7 @@
           "text": "To rest"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "To continue"
         }
       ],
@@ -3034,7 +3034,7 @@
           "text": "fastest"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "faster"
         }
       ],
@@ -3057,7 +3057,7 @@
           "text": "can"
         },
         {
-          "selected": false,
+          "selected": true,
           "text": "must"
         }
       ],
@@ -3068,7 +3068,7 @@
     {
       "answers": [
         {
-          "selected": false,
+          "selected": true,
           "text": "would live"
         },
         {
