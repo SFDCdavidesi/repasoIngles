@@ -123,6 +123,20 @@
       transform: translateY(-1px);
     }
 
+    button:focus-visible,
+    .file-label:focus-visible,
+    .option:focus-visible {
+      outline: 3px solid rgba(13, 110, 253, 0.35);
+      outline-offset: 2px;
+    }
+
+    button:disabled,
+    .option[disabled] {
+      opacity: 0.56;
+      cursor: not-allowed;
+      transform: none;
+    }
+
     .btn-primary {
       background: var(--primary);
       color: #fff;
@@ -171,6 +185,32 @@
       font-size: 1.08rem;
       line-height: 1.5;
       font-weight: 600;
+    }
+
+    .progress-wrap {
+      display: grid;
+      gap: 6px;
+    }
+
+    .progress-label {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 10px;
+      border-radius: 999px;
+      background: #e7eef7;
+      border: 1px solid #d6e1ec;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #5f9dfd, #0d6efd);
+      transition: width 0.2s ease;
     }
 
     .options {
@@ -222,6 +262,15 @@
       background: var(--bad-bg);
       border-color: #f1b8b8;
       color: #842222;
+    }
+
+    .summary-box {
+      border: 1px solid #cfe0f3;
+      border-radius: 10px;
+      background: #f3f8ff;
+      padding: 10px;
+      font-size: 0.92rem;
+      color: #234261;
     }
 
     .nav {
@@ -330,7 +379,7 @@
         <button id="resetBtn" class="btn-secondary" type="button">Reiniciar test</button>
         <button id="downloadPdfBtn" class="btn-primary" type="button">Descargar preguntas en PDF</button>
       </div>
-      <p id="statusLine" class="muted">Cargando preguntas...</p>
+      <p id="statusLine" class="muted" role="status" aria-live="polite">Cargando preguntas...</p>
     </section>
 
     <section class="panel quiz" id="quizPanel" hidden>
@@ -341,9 +390,17 @@
         </div>
       </div>
 
+      <div class="progress-wrap" aria-label="Progreso del test">
+        <div id="progressLabel" class="progress-label">0% completado</div>
+        <div class="progress-track" aria-hidden="true">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+      </div>
+
       <p id="questionText" class="question-text"></p>
-      <div id="optionsContainer" class="options"></div>
-      <div id="feedbackBox" class="feedback" hidden></div>
+      <div id="optionsContainer" class="options" role="radiogroup" aria-label="Opciones de respuesta"></div>
+      <div id="feedbackBox" class="feedback" role="status" aria-live="polite" hidden></div>
+      <div id="finalSummary" class="summary-box" role="status" aria-live="polite" hidden></div>
 
       <div class="nav">
         <button id="prevBtn" class="btn-secondary" type="button">Anterior</button>
@@ -353,7 +410,7 @@
 
     <section class="panel history">
       <div class="title-row">
-        <h2 style="margin:0;font-size:1.05rem;">Resumenes guardados en cookies</h2>
+        <h2 style="margin:0;font-size:1.05rem;">Resumenes guardados</h2>
         <button id="clearHistoryBtn" class="btn-secondary" type="button">Borrar historial</button>
       </div>
       <div id="historyContainer" class="history-list"></div>
@@ -362,16 +419,21 @@
   </main>
 
   <script>
-    const HISTORY_COOKIE = "quiz_history_v1";
+    const LOCALE = "es-ES";
+    const DEFAULT_DATASET = "data.json";
+    const HISTORY_STORAGE_KEY = "quiz_history_v1";
     const HISTORY_MAX = 12;
+    const EMPTY_HISTORY_SUMMARY = "Selecciona una ejecucion para ver su resumen.";
 
     const state = {
-      datasetName: "data.json",
+      datasetName: DEFAULT_DATASET,
       questions: [],
       currentIndex: 0,
       answers: [],
       finished: false,
-      startedAt: null
+      startedAt: null,
+      attemptId: null,
+      savedAttemptId: null
     };
 
     const el = {
@@ -387,9 +449,12 @@
       quizPanel: document.getElementById("quizPanel"),
       chipCounter: document.getElementById("chipCounter"),
       chipPage: document.getElementById("chipPage"),
+      progressLabel: document.getElementById("progressLabel"),
+      progressBar: document.getElementById("progressBar"),
       questionText: document.getElementById("questionText"),
       optionsContainer: document.getElementById("optionsContainer"),
       feedbackBox: document.getElementById("feedbackBox"),
+      finalSummary: document.getElementById("finalSummary"),
       prevBtn: document.getElementById("prevBtn"),
       nextBtn: document.getElementById("nextBtn"),
       historyContainer: document.getElementById("historyContainer"),
@@ -397,18 +462,32 @@
       clearHistoryBtn: document.getElementById("clearHistoryBtn")
     };
 
-    function normalizeText(value) {
-      return String(value || "").trim().toLowerCase();
-    }
-
     function getCorrectIndex(question) {
       if (!question || !Array.isArray(question.answers)) return -1;
       return question.answers.findIndex((a) => Boolean(a.selected));
     }
 
+    function parseSafePage(value, fallback) {
+      const parsed = Number(value);
+      if (Number.isInteger(parsed) && parsed > 0) return parsed;
+      return fallback;
+    }
+
+    function isSelectedValue(value) {
+      return value === true || value === 1 || value === "1" || value === "true";
+    }
+
+    function hasExactlyOneCorrectAnswer(question) {
+      return question.answers.filter((answer) => answer.selected).length === 1;
+    }
+
     function parseQuestion(raw, index) {
+      if (!raw || typeof raw !== "object") {
+        return { page: index + 1, question: "", answers: [] };
+      }
+
       const qText = String(raw.question || raw.qtext || raw.text || "").trim();
-      const page = Number.isInteger(raw.page) ? raw.page : index;
+      const page = parseSafePage(raw.page, index + 1);
       const answersRaw = Array.isArray(raw.answers) ? raw.answers : [];
 
       const answers = answersRaw.map((a) => {
@@ -417,7 +496,7 @@
         }
         return {
           text: String(a.text || a.answer || "").trim(),
-          selected: Boolean(a.selected)
+          selected: isSelectedValue(a.selected)
         };
       }).filter((a) => a.text.length > 0);
 
@@ -437,7 +516,7 @@
 
       const questions = base
         .map(parseQuestion)
-        .filter((q) => q.question && q.answers.length >= 2)
+        .filter((q) => q.question && q.answers.length >= 2 && hasExactlyOneCorrectAnswer(q))
         .map((q, idx) => ({ ...q, id: idx }));
 
       return questions;
@@ -472,39 +551,74 @@
       el.scorePercent.textContent = `${stats.percent}%`;
     }
 
+    function updateProgressUI() {
+      const stats = getStats();
+      const progress = stats.total > 0 ? Math.round((stats.answered / stats.total) * 100) : 0;
+      el.progressBar.style.width = `${progress}%`;
+      el.progressLabel.textContent = `${progress}% completado (${stats.answered}/${stats.total})`;
+    }
+
+    function renderFinalSummary() {
+      const stats = getStats();
+      if (!state.finished || !stats.total) {
+        el.finalSummary.hidden = true;
+        return;
+      }
+      const durationSec = state.startedAt ? Math.max(1, Math.round((Date.now() - state.startedAt) / 1000)) : 0;
+      el.finalSummary.hidden = false;
+      el.finalSummary.innerHTML = `
+        <strong>Test finalizado</strong><br>
+        Resultado: ${stats.correct}/${stats.total} (${stats.percent}%)<br>
+        Contestadas: ${stats.answered}/${stats.total}<br>
+        Falladas: ${stats.wrong}<br>
+        Duracion aproximada: ${durationSec}s
+      `;
+    }
+
     function formatDate(iso) {
       const d = new Date(iso);
       if (Number.isNaN(d.getTime())) return "Fecha desconocida";
-      return d.toLocaleString("es-ES");
+      return d.toLocaleString(LOCALE);
     }
 
-    function setCookie(name, value, days) {
-      const date = new Date();
-      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-      document.cookie = `${name}=${encodeURIComponent(value)};expires=${date.toUTCString()};path=/;SameSite=Lax`;
-    }
+    function sanitizeHistoryItem(item) {
+      if (!item || typeof item !== "object") return null;
+      const total = Number(item.total);
+      const answered = Number(item.answered);
+      const correct = Number(item.correct);
+      const wrong = Number(item.wrong);
+      const percent = Number(item.percent);
+      const durationSec = Number(item.durationSec);
+      if (!Number.isFinite(total) || total <= 0) return null;
+      if (!Number.isFinite(answered) || answered < 0 || answered > total) return null;
+      if (!Number.isFinite(correct) || correct < 0 || correct > answered) return null;
+      if (!Number.isFinite(wrong) || wrong < 0 || wrong > answered) return null;
+      if (!Number.isFinite(percent) || percent < 0 || percent > 100) return null;
+      if (!Number.isFinite(durationSec) || durationSec < 0) return null;
 
-    function getCookie(name) {
-      const key = `${name}=`;
-      const parts = document.cookie.split(";").map((s) => s.trim());
-      for (const p of parts) {
-        if (p.indexOf(key) === 0) {
-          return decodeURIComponent(p.substring(key.length));
-        }
-      }
-      return "";
-    }
-
-    function deleteCookie(name) {
-      document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;SameSite=Lax`;
+      return {
+        id: String(item.id || `attempt_${Date.now()}`),
+        dataset: String(item.dataset || DEFAULT_DATASET),
+        date: String(item.date || new Date().toISOString()),
+        total: Math.round(total),
+        answered: Math.round(answered),
+        correct: Math.round(correct),
+        wrong: Math.round(wrong),
+        percent: Math.round(percent),
+        durationSec: Math.round(durationSec)
+      };
     }
 
     function readHistory() {
       try {
-        const raw = getCookie(HISTORY_COOKIE);
+        const raw = localStorage.getItem(HISTORY_STORAGE_KEY);
         if (!raw) return [];
         const parsed = JSON.parse(raw);
-        return Array.isArray(parsed) ? parsed : [];
+        if (!Array.isArray(parsed)) return [];
+        return parsed
+          .map(sanitizeHistoryItem)
+          .filter((item) => item !== null)
+          .slice(0, HISTORY_MAX);
       } catch (_err) {
         return [];
       }
@@ -522,16 +636,26 @@
         percent: i.percent,
         durationSec: i.durationSec
       }));
-      setCookie(HISTORY_COOKIE, JSON.stringify(compact), 365);
+      localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(compact));
+    }
+
+    function clearHistoryStorage() {
+      localStorage.removeItem(HISTORY_STORAGE_KEY);
+    }
+
+    function resetHistorySummary() {
+      el.historySummary.className = "empty";
+      el.historySummary.textContent = EMPTY_HISTORY_SUMMARY;
     }
 
     function saveAttemptSummary() {
       const stats = getStats();
       if (stats.total === 0 || stats.answered === 0 || !state.startedAt) return;
+      if (!state.attemptId || state.savedAttemptId === state.attemptId) return;
 
       const durationSec = Math.max(1, Math.round((Date.now() - state.startedAt) / 1000));
       const item = {
-        id: `attempt_${Date.now()}`,
+        id: state.attemptId,
         dataset: state.datasetName,
         date: new Date().toISOString(),
         total: stats.total,
@@ -545,6 +669,7 @@
       const list = readHistory();
       list.unshift(item);
       writeHistory(list);
+      state.savedAttemptId = state.attemptId;
       renderHistory();
     }
 
@@ -567,6 +692,7 @@
 
       if (list.length === 0) {
         el.historyContainer.innerHTML = `<div class="empty">No hay ejecuciones guardadas todavia.</div>`;
+        resetHistorySummary();
         return;
       }
 
@@ -608,12 +734,17 @@
       el.chipPage.textContent = `Pagina original: ${q.page}`;
       el.questionText.textContent = q.question;
       el.optionsContainer.innerHTML = "";
+      el.optionsContainer.setAttribute("aria-label", `Opciones para la pregunta ${state.currentIndex + 1}`);
 
       q.answers.forEach((ans, idx) => {
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "option";
         btn.textContent = ans.text;
+        btn.setAttribute("role", "radio");
+        btn.setAttribute("aria-checked", String(idx === selectedIndex));
+        btn.setAttribute("aria-label", `Opcion ${idx + 1}: ${ans.text}`);
+        btn.id = `q${state.currentIndex}_opt${idx}`;
 
         if (hasAnswered) {
           if (idx === selectedIndex) btn.classList.add("selected");
@@ -644,6 +775,8 @@
       el.prevBtn.disabled = state.currentIndex === 0;
       el.nextBtn.disabled = state.currentIndex === state.questions.length - 1;
       updateScoreUI();
+      updateProgressUI();
+      renderFinalSummary();
     }
 
     function checkFinish() {
@@ -651,7 +784,9 @@
       if (stats.answered === stats.total && !state.finished) {
         state.finished = true;
         saveAttemptSummary();
-        el.statusLine.textContent = `Test completado. Puntuacion final: ${stats.correct}/${stats.total} (${stats.percent}%).`;
+        const durationSec = state.startedAt ? Math.max(1, Math.round((Date.now() - state.startedAt) / 1000)) : 0;
+        el.statusLine.textContent = `Test completado: ${stats.correct}/${stats.total} (${stats.percent}%) en ${durationSec}s.`;
+        renderFinalSummary();
       }
     }
 
@@ -667,29 +802,31 @@
       state.answers = state.questions.map(() => null);
       state.finished = false;
       state.startedAt = Date.now();
+      state.attemptId = `attempt_${state.startedAt}`;
       el.statusLine.textContent = `Test cargado con ${state.questions.length} preguntas.`;
+      el.finalSummary.hidden = true;
       renderQuestion();
     }
 
     function loadQuestions(data, datasetLabel) {
       const parsed = sanitizeData(data);
       if (parsed.length === 0) {
-        throw new Error("No se encontraron preguntas validas. Se espera un array en items con question y answers.");
+        throw new Error("No se encontraron preguntas validas. Cada pregunta debe tener texto, al menos 2 respuestas y exactamente 1 respuesta correcta.");
       }
 
       state.questions = parsed;
-      state.datasetName = datasetLabel || "data.json";
+      state.datasetName = datasetLabel || DEFAULT_DATASET;
       el.datasetName.textContent = `Fuente: ${state.datasetName}`;
       resetQuiz();
     }
 
     async function loadDefaultJson() {
-      const response = await fetch("data.json", { cache: "no-store" });
+      const response = await fetch(DEFAULT_DATASET, { cache: "no-store" });
       if (!response.ok) {
-        throw new Error("No se pudo cargar data.json. Verifica que exista en la carpeta del proyecto.");
+        throw new Error(`No se pudo cargar ${DEFAULT_DATASET}. Verifica que exista en la carpeta del proyecto.`);
       }
       const data = await response.json();
-      loadQuestions(data, "data.json");
+      loadQuestions(data, DEFAULT_DATASET);
     }
 
     async function exportPdf() {
@@ -705,6 +842,8 @@
       const margin = 40;
       const width = 515;
       let y = 50;
+      const stats = getStats();
+      const durationSec = state.startedAt ? Math.max(1, Math.round((Date.now() - state.startedAt) / 1000)) : 0;
 
       function addLine(text, fontSize = 11, isBold = false) {
         doc.setFont("helvetica", isBold ? "bold" : "normal");
@@ -721,7 +860,8 @@
 
       addLine("Repaso de preguntas", 15, true);
       addLine(`Fuente: ${state.datasetName}`, 10, false);
-      addLine(`Generado: ${new Date().toLocaleString("es-ES")}`, 10, false);
+      addLine(`Generado: ${new Date().toLocaleString(LOCALE)}`, 10, false);
+      addLine(`Resumen: ${stats.correct}/${stats.total} aciertos | ${stats.wrong} fallos | ${stats.percent}% | ${stats.answered}/${stats.total} contestadas | ${durationSec}s`, 10, false);
       addLine(" ", 10, false);
 
       state.questions.forEach((q, idx) => {
@@ -736,8 +876,19 @@
           const badge = marks.length ? ` [${marks.join(" | ")}]` : "";
           addLine(`   - ${ans.text}${badge}`, 10, false);
         });
+        if (selectedIndex === null || selectedIndex === undefined) {
+          addLine("   - Sin responder", 10, false);
+        }
         addLine(" ", 10, false);
       });
+
+      const pageCount = doc.getNumberOfPages();
+      for (let i = 1; i <= pageCount; i += 1) {
+        doc.setPage(i);
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(9);
+        doc.text(`Pagina ${i} de ${pageCount}`, margin, 822);
+      }
 
       doc.save("repaso_preguntas.pdf");
     }
@@ -759,7 +910,9 @@
 
       el.resetBtn.addEventListener("click", () => {
         if (!state.questions.length) return;
-        resetQuiz();
+        if (window.confirm("¿Seguro que quieres reiniciar el test? Se perdera el progreso actual.")) {
+          resetQuiz();
+        }
       });
 
       el.downloadPdfBtn.addEventListener("click", exportPdf);
@@ -780,15 +933,15 @@
       });
 
       el.clearHistoryBtn.addEventListener("click", () => {
-        deleteCookie(HISTORY_COOKIE);
+        clearHistoryStorage();
         renderHistory();
-        el.historySummary.className = "empty";
-        el.historySummary.textContent = "Selecciona una ejecucion para ver su resumen.";
+        resetHistorySummary();
       });
     }
 
     async function init() {
       wireEvents();
+      resetHistorySummary();
       renderHistory();
       try {
         await loadDefaultJson();
